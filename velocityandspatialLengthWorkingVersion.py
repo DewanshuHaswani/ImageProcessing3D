@@ -378,11 +378,36 @@ for j in subgraphlist3:
             # or junction
             if neighbour in endPoints:
                 # Setup to skip that end point
+                
+                #Make it a function Laterr
+                #calculate the spatial length
+                res1 = abs(next_node[1]-pointer_node[1])
+                res2 = abs(next_node[2]-pointer_node[2])
+                x = math.pow(res1, 2) + math.pow(res2, 2)
+                y = math.sqrt(x)
+                spat_length = spat_length + y 
+                
+                #calculating velocity length 
+                vel_length = vel_length + abs(next_node[0]-pointer_node[0])
+                
+                
                 used_ends.append(neighbour)
                 print("broke")
                 break
             elif neighbour in junction:
                 # End on junctions
+                                #Make it a function Laterr
+
+                #calculate the spatial length
+                res1 = abs(next_node[1]-pointer_node[1])
+                res2 = abs(next_node[2]-pointer_node[2])
+                x = math.pow(res1, 2) + math.pow(res2, 2)
+                y = math.sqrt(x)
+                spat_length = spat_length + y 
+                
+                #calculating velocity length 
+                vel_length = vel_length + abs(next_node[0]-pointer_node[0])
+                
                 print("broke")
                 break
             else:
