@@ -390,7 +390,7 @@ for j in subgraphlist3:
                 ##me 
                 used_nodes.append(curr_node)
                 
-                #calculate the spatial
+                #calculate the spatial length
                 res1 = abs(next_node[1]-pointer_node[1])
                 res2 = abs(next_node[2]-pointer_node[2])
                 x = math.pow(res1, 2) + math.pow(res2, 2)
@@ -413,6 +413,11 @@ for j in subgraphlist3:
         veloctiy_length.append(vel_length)        
 
      #   end_ct += 1
+
+result = list(zip(node_number, cordinates, spatial_length, veloctiy_length))
+
+# Converting itertor to set
+print(result)
 
 
     # count = 0
